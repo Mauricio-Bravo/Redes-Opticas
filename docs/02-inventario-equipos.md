@@ -50,7 +50,9 @@ A continuación se detallan las especificaciones funcionales, interfaces física
 
 ### 6. Carretes de Fibra Óptica (AB - 25 KM y BA - 25 KM)
 - **Función técnica:** Bobinas de fibra óptica monomodo estándar (**ITU-T G.652.D**) encapsuladas en cajas de laboratorio de 25 km de longitud cada una, diseñadas para emular la atenuación ($pprox 0.20	ext{ dB/km} 	imes 25	ext{ km} pprox 5	ext{ dB}$ más pérdidas de conectores) y la dispersión cromática de un tramo real de planta externa.
-- **Tipo de interfaz:** Pigtails o conectores terminados en **LC/UPC** o **LC/APC** rotulados por sentido de transmisión (**AB** para el sentido Nodo 1 $ightarrow$ Nodo 2, y **BA** para el sentido Nodo 2 $ightarrow$ Nodo 1).
+- **Tipo de interfaz:** Pigtails o conectores terminados en **LC/UPC** o **LC/APC** rotulados por sentido de transmisión (**AB** para el sentido Nodo 1 $
+ightarrow$ Nodo 2, y **BA** para el sentido Nodo 2 $
+ightarrow$ Nodo 1).
 - **Rol dentro del rack:** Simulan el enlace troncal bidireccional de transporte de larga distancia entre el Chasis DWDM 1 y el Chasis DWDM 2 a través del ODF.
 
 ### 7. Atenuador Óptico Variable - OVA (JW3303)
