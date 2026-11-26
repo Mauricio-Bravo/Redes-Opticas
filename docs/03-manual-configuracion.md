@@ -13,7 +13,9 @@ Los sistemas DWDM operan en la **Banda C ($pprox 1530	ext{ – }1565	ext{ nm}$)
 
 ### Limpieza de conectores y manejo de APC vs. UPC
 La suciedad microscópica (polvo, grasa cutánea) en el núcleo de $9	ext{ }\mu	ext{m}$ de una fibra monomodo provoca alta atenuación, reflexiones retrógradas (*back-reflection*) y daño permanente por quemadura térmica (*pitting*) en la férula al transmitir alta potencia óptica.
-- **Protocolo de limpieza:** Aplicar siempre la regla **"Inspeccionar $ightarrow$ Limpiar $ightarrow$ Inspeccionar"** usando limpiadores en seco tipo *one-click* (para acopladores y férulas) o toallitas libres de pelusa con alcohol isopropílico de grado óptico antes de cada acoplamiento.
+- **Protocolo de limpieza:** Aplicar siempre la regla **"Inspeccionar $
+ightarrow$ Limpiar $
+ightarrow$ Inspeccionar"** usando limpiadores en seco tipo *one-click* (para acopladores y férulas) o toallitas libres de pelusa con alcohol isopropílico de grado óptico antes de cada acoplamiento.
 - **Compatibilidad física UPC vs. APC:**
   - **UPC (*Ultra Physical Contact*, color azul):** Férula pulida plana con ligera curvatura ($0^\circ$), pérdida de retorno típica $\ge 50	ext{ dB}$.
   - **APC (*Angled Physical Contact*, color verde):** Férula pulida con un ángulo de **$8^\circ$** para desviar las reflexiones hacia el revestimiento (*cladding*), logrando una pérdida de retorno $\ge 60	ext{ dB}$.
@@ -66,7 +68,8 @@ La suciedad microscópica (polvo, grasa cutánea) en el núcleo de $9	ext{ }\mu	
 
 ### C. Medición de pérdida de tramas y BER con el Analizador Ethernet (VeEX MTX150x)
 1. Conectar el puerto óptico/eléctrico del **MTX150x** al puerto de acceso del **Switch CSS610** (Nodo 1).
-2. Configurar un bucle físico (*hard loop* con *patch cord* cruzado TX $ightarrow$ RX) en el puerto de cliente equivalente del **Chasis DWDM 2** (o en un segundo puerto del nodo remoto) para cerrar el circuito bidireccional.
+2. Configurar un bucle físico (*hard loop* con *patch cord* cruzado TX $
+ightarrow$ RX) en el puerto de cliente equivalente del **Chasis DWDM 2** (o en un segundo puerto del nodo remoto) para cerrar el circuito bidireccional.
 3. En el **MTX150x**, seleccionar la aplicación de prueba **BERT** (*Bit Error Rate Test*) o **RFC 2544**:
    - Configurar interfaz (1G o 10G), encapsulación Ethernet, tamaño de trama (ej. 64, 512, 1518 bytes o patrón IMIX) y patrón pseudoaleatorio **PRBS $2^{31}-1$**.
    - Iniciar la transmisión al $100\%$ de carga de línea durante un intervalo definido (ej. 60 segundos por punto de medición).
