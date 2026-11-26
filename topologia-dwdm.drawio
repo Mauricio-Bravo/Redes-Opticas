@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" modified="2026-11-26T08:30:00.000Z" agent="Gemini" version="24.7.17" type="device">
+  <diagram id="dwdm-lab-topo" name="Topologia-Fisica-DWDM">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="MAQUETA DE LABORATORIO DWDM - TOPOLOGÍA FÍSICA Y FLUJO DE SEÑAL" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#1B365D;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mtx" value="Analizador Ethernet&#xa;VeEX MTX150x&#xa;(RFC 2544 / Y.1564)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sw" value="Switch Ethernet&#xa;MikroTik CSS610&#xa;(8x 1G + 2x SFP+ 10G)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="250" y="160" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ht1" value="Chasis DWDM 1&#xa;HT6000 (Nodo A)&#xa;OTU + MUX/DEMUX" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="470" y="150" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="odf" value="ODF&#xa;(Optical Distribution Frame)&#xa;Panel de Parcheo LC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="710" y="150" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="spool_ab" value="Carrete Fibra AB&#xa;25 KM (G.652.D)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="710" y="320" width="170" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="ova" value="Atenuador Óptico&#xa;Variable (OVA JW3303)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="940" y="320" width="170" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="spool_ba" value="Carrete Fibra BA&#xa;25 KM (G.652.D)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="710" y="430" width="170" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="ht2" value="Chasis DWDM 2&#xa;HT6000 (Nodo B)&#xa;DEMUX/MUX + OTU" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="150" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="osa" value="Analizador de Espectro&#xa;Óptico - OSA (RXT4510)&#xa;Puerto MON (-20 dB)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="320" width="180" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#1f4e79;" edge="1" parent="1" source="mtx" target="sw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#1f4e79;" edge="1" parent="1" source="sw" target="ht1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#2e7d32;" edge="1" parent="1" source="ht1" target="odf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#c62828;" edge="1" parent="1" source="odf" target="spool_ab">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#c62828;" edge="1" parent="1" source="spool_ab" target="ova">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#6a1b9a;" edge="1" parent="1" source="ova" target="ht2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="endArrow=classic;html=1;strokeWidth=2;dashed=1;strokeColor=#ef6c00;" edge="1" parent="1" source="ht2" target="osa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#1565c0;" edge="1" parent="1" source="ht2" target="spool_ba">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#1565c0;" edge="1" parent="1" source="spool_ba" target="odf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
